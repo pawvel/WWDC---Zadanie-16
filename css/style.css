@@ -1,2 +1,2 @@
-.foo.center{text-align:right}
+.header{height:100vh;background-image:url("../images/header-background.png");background-position:center;background-repeat:no-repeat}.header h1{width:500px;font-family:"Poppins",sans-serif;font-size:3rem;color:#fff;font-weight:600;text-transform:uppercase;margin-top:20vh}.header p{width:500px;color:#fff;font-family:"PT Serif",serif}.navbar{display:flex;align-items:center;justify-content:space-between;margin-top:20px}.navbar ul{display:flex;align-items:center}.navbar ul li a{color:#fff;text-decoration:none;font-family:"PT Serif",serif;margin-right:50px}
 /*# sourceMappingURL=style.css.map */

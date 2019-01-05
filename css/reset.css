@@ -1,6 +1,10 @@
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: sans-serif;
-  background: #f8f9fb;
+  background: #ffffff;
 }
 
 html,

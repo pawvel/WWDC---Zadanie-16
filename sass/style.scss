@@ -1,23 +1,55 @@
 @import "mixins";
 
+/*#region FONT SIZES*/
+$fontSize-h1: 3em;
+$fontSize-h2: 2em;
+$fontSize-h5: 1.125em;
+$fontSize-h6: 1em;
+$fontSize-p: 1em;
+$fontNumber: 3em;
+$fontFooter: 0.875em;
+$fontPrice: 2.5em;
+/*#endregion*/
+
+/*#region FONTS*/
+$fontPoppins: "Poppins", sans-serif;
+$fontPT_Serif: "PT Serif", serif;
+$fontFontAwesome: "Font Awesome 5 Free";
+/*#endregion*/
+
+/*#region COLORS*/
+$color-white: #ffffff;
+$colorPriceTable: #f8f8f8;
+$color-light-grey: #aeaeae;
+$color-gray: #999999;
+$color-dark-grey: #333333;
+$color-green: #66a900;
+$color-price-type: #f6f6f6;
+/*#endregion*/
+
+.background {
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
 .header {
   height: 100vh;
   background-image: url("../images/header-background.png");
-  background-position: center;
-  background-repeat: no-repeat;
+
   h1 {
     width: 500px;
-    font-family: $font-poppins;
+    font-family: $fontPoppins;
+    font-weight: 700;
     font-size: $fontSize-h1;
     color: $color-white;
-    font-weight: 600;
     text-transform: uppercase;
     margin-top: 20vh;
   }
   p {
     width: 500px;
     color: $color-white;
-    font-family: $font-ptserif;
+    font-family: $fontPT_Serif;
+    font-size: $fontSize-p;
   }
 }
 
@@ -33,8 +65,278 @@
       a {
         color: $color-white;
         text-decoration: none;
-        font-family: $font-ptserif;
         margin-right: 50px;
+      }
+    }
+  }
+}
+
+.image {
+  margin: 20px;
+}
+
+.frame_up {
+  height: 70px;
+  background-image: url("../images/image-shape.png");
+}
+
+.frame_down {
+  height: 275px;
+  background-image: url("../images/get-background.png");
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  top: 50%;
+  transform: translate-top(-50%);
+}
+
+.frame_down_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+
+  h2 {
+    font-family: $fontPoppins;
+    color: $color-white;
+  }
+  p {
+    text-align: justify;
+    font-family: $fontPT_Serif;
+    color: $color-white;
+    font-size: $fontSize-p;
+  }
+
+  button {
+    color: $color-green;
+    background-color: $color-white;
+    height: 60px;
+    width: 270px;
+    border: none;
+    border-radius: 2px;
+    font-weight: bold;
+    font-family: $fontPT_Serif;
+    font-size: 1em;
+
+    &:hover {
+      filter: brightness(85%);
+    }
+  }
+}
+
+.about {
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.horizontal {
+  flex-direction: column;
+}
+
+.number {
+  font-family: $fontPT_Serif;
+  font-size: $fontNumber;
+  color: $color-light-grey;
+  font-weight: bold;
+}
+
+.spanGreen {
+  color: $color-green;
+}
+
+.number_section {
+  h2 {
+    font-family: $fontPoppins;
+    color: $color-dark-grey;
+  }
+  p {
+    text-align: justify;
+    font-family: $fontPT_Serif;
+    color: $color-light-grey;
+    font-size: $fontSize-p;
+  }
+  h6 {
+    font-family: $fontPoppins;
+    color: $color-gray;
+    font-size: $fontSize-h6;
+  }
+}
+
+.number_section:nth-child(odd) {
+  margin-left: 150px;
+}
+
+.number_section:nth-child(even) {
+  margin-right: 150px;
+}
+
+.point_wrapper {
+  display: flex;
+}
+
+.point {
+  color: $color-white;
+  background-color: $color-green;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.check_wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+
+  .check_col {
+    width: 300px;
+  }
+
+  h5 {
+    font-family: $fontPoppins;
+    font-size: $fontSize-h5;
+    color: $color-dark-grey;
+    margin: 0px;
+
+    &::before {
+      content: "\f058";
+      font-family: $fontFontAwesome;
+      border-radius: 50%;
+      color: $color-green;
+      width: 50;
+      height: 50;
+      margin-right: 10px;
+    }
+  }
+
+  p {
+    margin-top: 10px;
+    margin-left: 30px;
+  }
+}
+
+.prices_background {
+  background-image: url("../images/our-pricing.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.prices {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 90%;
+
+  .price_table {
+    background-color: $colorPriceTable;
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.25);
+
+    .price_type {
+      width: 370px;
+
+      h6 {
+        color: $color-gray;
+        line-height: 40px;
+        border-left: solid 3px $color-green;
+        border-right: solid 3px $color-green;
+        background-color: $color-price-type;
+        text-align: center;
+        vertical-align: middle;
+
+        &:hover {
+          background-color: $color-green;
+          color: $color-white;
+          border: none;
+        }
+      }
+    }
+
+    .order_arrow::after {
+      font-family: $fontFontAwesome;
+      content: "\f054";
+      color: $color-dark-grey;
+      width: 40;
+      height: 40;
+      margin-left: 10px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h1 {
+      font-size: $fontPrice;
+      font-family: $fontPoppins;
+      margin: 10px;
+    }
+
+    h6 {
+      margin: 10px;
+      font-family: $fontPoppins;
+      font-size: $fontSize-h6;
+      text-transform: uppercase;
+      color: $color-dark-grey;
+
+      &:hover {
+        color: $color-green;
+      }
+
+      &:hover::after {
+        color: $color-green;
+      }
+    }
+
+    p {
+      font-family: $fontPT_Serif;
+      font-size: $fontSize-p;
+      color: $color-gray;
+      margin: 10px;
+      text-align: center;
+      width: 300px;
+    }
+  }
+}
+
+.price_down_wrapper {
+  margin: 50px 0;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 150px 30px 150px;
+
+  .footer_col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $fontFooter;
+
+    p {
+      color: $color-light-grey;
+      text-align: center;
+      margin: 0 0 0 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-light-grey;
+      margin-right: 20px;
+
+      &:hover {
+        transform: scale(1.1);
       }
     }
   }

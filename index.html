@@ -26,14 +26,13 @@
           <img src="images/logo-header.png" alt="logo" />
           <ul>
             <li><a href="#">Welcome</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Testimonial</a></li>
-            <li><a href="#">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#testimonial">Testimonial</a></li>
+            <li><a href="#pricing">Pricing</a></li>
             <li><a href="#">Blog</a></li>
           </ul>
         </nav>
-        <!-- TODO BOLD THIS H1 -->
         <h1>Refresh yourself By Yoga Exercise</h1>
         <p>
           Vidit dolores iracundia ei sed, mei summo constituto no, ei vidit
@@ -43,7 +42,7 @@
     </header>
     <section class="frame_up background"></section>
     <!-- Nr 1 -->
-    <section class="about">
+    <section id="about" class="about center">
       <div class="number_section">
         <h2>
           <span class="number">01. </span>What is<span class="spanGreen">
@@ -64,7 +63,7 @@
       <img class="image" src="images/yoga-image.png" alt="woman1" />
     </section>
     <!-- Nr 2 -->
-    <section class="about">
+    <section id="features" class="about center">
       <img class="image" src="images/girl-image-2.png" alt="woman2" />
       <div class="number_section">
         <h2>
@@ -88,7 +87,7 @@
         </div>
       </div>
     </section>
-    <section class="frame_down background">
+    <div class="frame_down background">
       <div class="frame_down_wrapper absolute">
         <div>
           <h2>Get your fitness back today</h2>
@@ -97,9 +96,9 @@
         <img src="images/arrow-get.png" />
         <button>Get your free registration</button>
       </div>
-    </section>
+    </div>
     <!-- Nr 3 -->
-    <section class="about">
+    <section id="testimonial" class="about center">
       <div class="number_section">
         <h2>
           <span class="number">03. </span>Why choose<span class="spanGreen">
@@ -135,8 +134,8 @@
                 duo.
               </p>
             </div>
-            <div class="24/7 Open">
-              <h5>Expert Trainers</h5>
+            <div class="check_note">
+              <h5>24/7 Open</h5>
               <p>
                 At pri idque democritum, aperiri cotidieque te est, sit et
                 vocent omnesque.
@@ -148,29 +147,67 @@
       <img class="image" src="images/choose-images.png" alt="people" />
     </section>
     <!-- Nr 4 -->
-    <section class="about">
-      <img class="image" src="images/carousel-img-1.png" alt="woman1" />
-      <div class="number_section">
-        <h2>
-          <span class="number">04. </span>Some awesome<span class="spanGreen">
-            speeches</span
-          >
-        </h2>
-        <p>
-          Ad usu dolor suavitate. Eam te liber reformidans, ut sit oblique
-          dissentias, erant sensibus ad eum. His cu wisi indoctum.
-        </p>
-        <p>
-          Vero velit vix ad, ne mei augue docendi maluisset. Mel eu graece
-          omittam, ei erant platonem erroribus mel. Et invenire deseruisse quo,
-          soleat alterum et quo. Vel idque offendit ut, ut vis illud percipit,
-          novum admodum ea est. Ad voluptaria interesset eum.
-        </p>
+    <section class="about center">
+      <div class="flex">
+        <div class="carousel">
+          <div class="img_carousel">
+            <div id="img1" class="prev">
+              <img src="images/carousel-img1.png" alt="woman4" />
+            </div>
+            <div id="img2" class="selected">
+              <img src="images/carousel-img2.png" alt="woman4" />
+            </div>
+            <div id="img3" class="next">
+              <img src="images/carousel-img3.png" alt="woman4" />
+            </div>
+          </div>
+          <div class="buttons">
+            <button id="prev" class="btn_carousel" onclick="carouselPrev()">
+              <span class="fas fa-chevron-left"></span>
+            </button>
+            <button id="next" class="btn_carousel" onclick="carouselNext()">
+              <span class="fas fa-chevron-right"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="number_section">
+          <h2>
+            <span class="number">04. </span>Some awesome<span class="spanGreen">
+              speeches</span
+            >
+          </h2>
+          <div class="citations">
+            <div class="citation hide">
+              <p>
+                "Ea recusabo repudiare reprimique eum. Et ius commodo torquatos
+                reprimique, ad est mucius impetus. In nec deleniti senserit,
+                inermis menandri."
+              </p>
+              <h6>Gwen "1" Stacy</h6>
+            </div>
+            <div class="citation hide">
+              <p>
+                "Ad usu dolor suavitate. Eam te liber reformidans, ut sit
+                oblique dissentias, erant sensibus ad eum. His cu wisi
+                indoctum."
+              </p>
+              <h6>Mary Jane "2" Watson</h6>
+            </div>
+            <div class="citation hide">
+              <p>
+                "Mea eu labitur splendide urbanitas. Ea augue putent scribentur
+                sea, porro novum probatus vel eu. Eu sea ludus honestatis, ex."
+              </p>
+              <h6>Felicia "3" Hardy</h6>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Nr 5 -->
-    <section class="about horizontal prices_background">
-      <div class="number_section">
+    <section id="pricing" class="about horizontal prices_background">
+      <div class="number_section width_60">
         <h2>
           <span class="number">05. </span>Our<span class="spanGreen">
             pricing & plans</span
@@ -237,12 +274,11 @@
         <a href="" class="footer_link">Termc & Conditions</a>
       </div>
     </footer>
+
+    <script src="scripts/carousel.js"></script>
   </body>
 </html>
 
 <!-- TODO
-1. numer 5 przesunąć na lewą strone nie na środku
-2. obracany obrazek z medytującą panią
-3. w numerze 3 zrobić punktu z kułkami i pseudo klasą
-4. poprawić wygląd wszystkich punktów
+1. płynna zmiana cytatów
 -->
